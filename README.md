@@ -90,7 +90,7 @@ You’ll need to complete the following tasks in each of these back-end files:
 
 * `auth.js`: Update the auth middleware function to work with the GraphQL API.
 
-* `server.js`: Implement the Apollo Server and apply it to the Express server as middleware.
+* `server.js`: Implement the Apollo Server and apply it to the Express server as middleware. - DUDA: authMiddlewere linea 8
 
 * `Schemas` directory:
 
