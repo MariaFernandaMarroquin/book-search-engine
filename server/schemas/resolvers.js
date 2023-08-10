@@ -1,5 +1,5 @@
-const { AuthenticationError } = require('apollo-server-express');
-const { User, Book } = require('../models'); //Aquí requiero entrar a User.js?
+const { AuthenticationError } = require('@apollo/server');
+const { User, Book } = require('../models');
 const { signToken } = require('../utils/auth');
 
 const resolvers = {
