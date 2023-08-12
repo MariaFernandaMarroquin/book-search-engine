@@ -4,7 +4,6 @@ const db = require('./config/connection');
 // const routes = require('./routes');
 // const { expressMiddleware } = require('@apollo/server/express4')
 
-
 //New code
 const { ApolloServer } = require('apollo-server-express');
 const { authMiddleware } = require('./utils/auth');
@@ -21,17 +20,6 @@ const server = new ApolloServer({
   resolvers,
   context: authMiddleware,
 }); //New code
-
-// // if we're in production, serve client/build as static assets
-// if (process.env.NODE_ENV === 'production') {
-//   app.use(express.static(path.join(__dirname, '../client/build')));
-
-//   //New code
-//   app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../client'));
-//   });
-// }
-
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -57,12 +45,6 @@ const startApolloServer = async () => {
     })
   })
 };
-
-// app.use(routes);
-
-// db.once('open', () => {
-//    app.listen(PORT, () => console.log(`🌍 Now listening on localhost:${PORT}`));
-//  });
 
 //Call the function to start the server - New Code
 startApolloServer();
