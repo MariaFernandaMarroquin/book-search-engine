@@ -39,7 +39,7 @@ const LoginForm = () => {
           email: userFormData.email, 
           password: userFormData.password },
       });
-      const token = mutationRes.data.loginUser.token;
+      const token = mutationRes.data.login.token;
       Auth.login(token);
     }  catch (err) {
       console.error(err);
